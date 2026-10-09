@@ -1,0 +1,3816 @@
+{
+  "aggregate": {
+    "episodes": 100,
+    "length": {
+      "mean": 227.15,
+      "std": 30.74390183434757
+    },
+    "metrics": {
+      "score": {
+        "mean": 300.0,
+        "std": 0.0
+      }
+    },
+    "monitor_counts": {
+      "gardener/collect-one-v0": {
+        "count": {
+          "mean": 0.35,
+          "std": 0.47696960070847283
+        }
+      },
+      "gardener/drain-v0": {
+        "Drain": {
+          "mean": 1.01,
+          "std": 1.3963881981741324
+        },
+        "Drain/0": {
+          "mean": 0.35,
+          "std": 0.6383572667401852
+        },
+        "Drain/1": {
+          "mean": 0.18,
+          "std": 0.4331281565541543
+        },
+        "Drain/2": {
+          "mean": 0.25,
+          "std": 0.6837397165588671
+        },
+        "Drain/3": {
+          "mean": 0.23,
+          "std": 0.6140846847137617
+        }
+      },
+      "gardener/permission-aware-v0": {
+        "Collected": {
+          "mean": 0.88,
+          "std": 0.7520638270785266
+        },
+        "Collected/0": {
+          "mean": 0.4,
+          "std": 0.4898979485566356
+        },
+        "Collected/1": {
+          "mean": 0.48,
+          "std": 0.49959983987187184
+        },
+        "Permitted": {
+          "mean": 0.23,
+          "std": 0.4439594576084623
+        },
+        "Permitted/0": {
+          "mean": 0.12,
+          "std": 0.32496153618543844
+        },
+        "Permitted/1": {
+          "mean": 0.11,
+          "std": 0.31288975694324034
+        },
+        "Unpermitted": {
+          "mean": 0.65,
+          "std": 0.7262919523166975
+        },
+        "Unpermitted/0": {
+          "mean": 0.28,
+          "std": 0.44899888641287294
+        },
+        "Unpermitted/1": {
+          "mean": 0.37,
+          "std": 0.48280430818293246
+        }
+      },
+      "gardener/rescue-v2": {
+        "Rescue": {
+          "mean": 0.96,
+          "std": 1.482700239428051
+        },
+        "Rescue/0": {
+          "mean": 0.53,
+          "std": 1.0144456614328832
+        },
+        "Rescue/1": {
+          "mean": 0.43,
+          "std": 0.8515280382935139
+        }
+      }
+    },
+    "return": {
+      "mean": 279.53500000000054,
+      "std": 4.236375219453405
+    }
+  },
+  "episodes": [
+    {
+      "episode": 0,
+      "length": 232,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 2,
+          "Collected/0": 1,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 2,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 281.8000000000004,
+      "termination": "terminated"
+    },
+    {
+      "episode": 1,
+      "length": 189,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 1,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 1,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 1,
+          "Rescue/1": 0
+        }
+      },
+      "return": 281.1000000000004,
+      "termination": "terminated"
+    },
+    {
+      "episode": 2,
+      "length": 254,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 1,
+          "Permitted/0": 0,
+          "Permitted/1": 1,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 279.6000000000004,
+      "termination": "terminated"
+    },
+    {
+      "episode": 3,
+      "length": 209,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 279.1000000000007,
+      "termination": "terminated"
+    },
+    {
+      "episode": 4,
+      "length": 240,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 1
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 1,
+          "Rescue/1": 0
+        }
+      },
+      "return": 281.0000000000005,
+      "termination": "terminated"
+    },
+    {
+      "episode": 5,
+      "length": 282,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 1,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 0,
+          "Rescue/1": 1
+        }
+      },
+      "return": 271.80000000000115,
+      "termination": "terminated"
+    },
+    {
+      "episode": 6,
+      "length": 276,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 0,
+          "Drain/1": 1,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 1,
+          "Rescue/1": 0
+        }
+      },
+      "return": 272.4000000000005,
+      "termination": "terminated"
+    },
+    {
+      "episode": 7,
+      "length": 254,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 274.6000000000006,
+      "termination": "terminated"
+    },
+    {
+      "episode": 8,
+      "length": 232,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 0,
+          "Drain/1": 1,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 1,
+          "Permitted/0": 0,
+          "Permitted/1": 1,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 1,
+          "Rescue/1": 0
+        }
+      },
+      "return": 281.8000000000004,
+      "termination": "terminated"
+    },
+    {
+      "episode": 9,
+      "length": 262,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 4,
+          "Drain/0": 1,
+          "Drain/1": 1,
+          "Drain/2": 0,
+          "Drain/3": 2
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 2,
+          "Collected/0": 1,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 2,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 4,
+          "Rescue/0": 3,
+          "Rescue/1": 1
+        }
+      },
+      "return": 273.800000000001,
+      "termination": "terminated"
+    },
+    {
+      "episode": 10,
+      "length": 221,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 2,
+          "Drain/0": 2,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 3,
+          "Rescue/0": 1,
+          "Rescue/1": 2
+        }
+      },
+      "return": 277.9000000000005,
+      "termination": "terminated"
+    },
+    {
+      "episode": 11,
+      "length": 198,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 2,
+          "Drain/0": 1,
+          "Drain/1": 1,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 2,
+          "Rescue/0": 1,
+          "Rescue/1": 1
+        }
+      },
+      "return": 285.2000000000005,
+      "termination": "terminated"
+    },
+    {
+      "episode": 12,
+      "length": 167,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 1,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 1,
+          "Rescue/1": 0
+        }
+      },
+      "return": 288.3000000000003,
+      "termination": "terminated"
+    },
+    {
+      "episode": 13,
+      "length": 248,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 275.2000000000005,
+      "termination": "terminated"
+    },
+    {
+      "episode": 14,
+      "length": 214,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 3,
+          "Drain/0": 3,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 3,
+          "Rescue/0": 2,
+          "Rescue/1": 1
+        }
+      },
+      "return": 283.60000000000014,
+      "termination": "terminated"
+    },
+    {
+      "episode": 15,
+      "length": 201,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 279.9000000000007,
+      "termination": "terminated"
+    },
+    {
+      "episode": 16,
+      "length": 268,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 0,
+          "Drain/1": 1,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 1,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 0,
+          "Rescue/1": 1
+        }
+      },
+      "return": 278.20000000000084,
+      "termination": "terminated"
+    },
+    {
+      "episode": 17,
+      "length": 193,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 2,
+          "Drain/0": 2,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 2,
+          "Rescue/0": 0,
+          "Rescue/1": 2
+        }
+      },
+      "return": 280.6999999999999,
+      "termination": "terminated"
+    },
+    {
+      "episode": 18,
+      "length": 240,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 2,
+          "Collected/0": 1,
+          "Collected/1": 1,
+          "Permitted": 1,
+          "Permitted/0": 1,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 281.0000000000004,
+      "termination": "terminated"
+    },
+    {
+      "episode": 19,
+      "length": 209,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 1,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 284.1000000000001,
+      "termination": "terminated"
+    },
+    {
+      "episode": 20,
+      "length": 205,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 284.5000000000006,
+      "termination": "terminated"
+    },
+    {
+      "episode": 21,
+      "length": 227,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 277.30000000000047,
+      "termination": "terminated"
+    },
+    {
+      "episode": 22,
+      "length": 219,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 3,
+          "Drain/0": 1,
+          "Drain/1": 1,
+          "Drain/2": 0,
+          "Drain/3": 1
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 2,
+          "Collected/0": 1,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 2,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 3,
+          "Rescue/0": 0,
+          "Rescue/1": 3
+        }
+      },
+      "return": 283.1000000000006,
+      "termination": "terminated"
+    },
+    {
+      "episode": 23,
+      "length": 218,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 6,
+          "Drain/0": 2,
+          "Drain/1": 0,
+          "Drain/2": 4,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 6,
+          "Rescue/0": 6,
+          "Rescue/1": 0
+        }
+      },
+      "return": 283.20000000000084,
+      "termination": "terminated"
+    },
+    {
+      "episode": 24,
+      "length": 229,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 282.1000000000003,
+      "termination": "terminated"
+    },
+    {
+      "episode": 25,
+      "length": 223,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 282.7000000000004,
+      "termination": "terminated"
+    },
+    {
+      "episode": 26,
+      "length": 260,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 0,
+          "Drain/1": 1,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 2,
+          "Collected/0": 1,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 2,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 1,
+          "Rescue/1": 0
+        }
+      },
+      "return": 274.00000000000074,
+      "termination": "terminated"
+    },
+    {
+      "episode": 27,
+      "length": 235,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 281.5000000000005,
+      "termination": "terminated"
+    },
+    {
+      "episode": 28,
+      "length": 243,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 3,
+          "Drain/0": 0,
+          "Drain/1": 1,
+          "Drain/2": 2,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 2,
+          "Collected/0": 1,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 2,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 4,
+          "Rescue/0": 3,
+          "Rescue/1": 1
+        }
+      },
+      "return": 275.7000000000008,
+      "termination": "terminated"
+    },
+    {
+      "episode": 29,
+      "length": 275,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 3,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 1,
+          "Drain/3": 2
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 3,
+          "Rescue/0": 0,
+          "Rescue/1": 3
+        }
+      },
+      "return": 272.50000000000057,
+      "termination": "terminated"
+    },
+    {
+      "episode": 30,
+      "length": 202,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 1,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 2,
+          "Collected/0": 1,
+          "Collected/1": 1,
+          "Permitted": 1,
+          "Permitted/0": 0,
+          "Permitted/1": 1,
+          "Unpermitted": 1,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 1,
+          "Rescue/1": 0
+        }
+      },
+      "return": 279.80000000000047,
+      "termination": "terminated"
+    },
+    {
+      "episode": 31,
+      "length": 188,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 281.2000000000003,
+      "termination": "terminated"
+    },
+    {
+      "episode": 32,
+      "length": 188,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 2,
+          "Drain/0": 1,
+          "Drain/1": 1,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 1,
+          "Collected/1": 0,
+          "Permitted": 1,
+          "Permitted/0": 1,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 2,
+          "Rescue/0": 2,
+          "Rescue/1": 0
+        }
+      },
+      "return": 286.20000000000067,
+      "termination": "terminated"
+    },
+    {
+      "episode": 33,
+      "length": 201,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 284.9000000000002,
+      "termination": "terminated"
+    },
+    {
+      "episode": 34,
+      "length": 277,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 272.3000000000006,
+      "termination": "terminated"
+    },
+    {
+      "episode": 35,
+      "length": 178,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 287.1999999999997,
+      "termination": "terminated"
+    },
+    {
+      "episode": 36,
+      "length": 231,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 281.9000000000006,
+      "termination": "terminated"
+    },
+    {
+      "episode": 37,
+      "length": 249,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 0,
+          "Drain/1": 1,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 0,
+          "Rescue/1": 1
+        }
+      },
+      "return": 280.1000000000002,
+      "termination": "terminated"
+    },
+    {
+      "episode": 38,
+      "length": 227,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 7,
+          "Drain/0": 1,
+          "Drain/1": 0,
+          "Drain/2": 2,
+          "Drain/3": 4
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 7,
+          "Rescue/0": 4,
+          "Rescue/1": 3
+        }
+      },
+      "return": 277.30000000000007,
+      "termination": "terminated"
+    },
+    {
+      "episode": 39,
+      "length": 186,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 1,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 2,
+          "Collected/0": 1,
+          "Collected/1": 1,
+          "Permitted": 2,
+          "Permitted/0": 1,
+          "Permitted/1": 1,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 286.4000000000003,
+      "termination": "terminated"
+    },
+    {
+      "episode": 40,
+      "length": 216,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 1
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 2,
+          "Collected/0": 1,
+          "Collected/1": 1,
+          "Permitted": 1,
+          "Permitted/0": 1,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 278.40000000000083,
+      "termination": "terminated"
+    },
+    {
+      "episode": 41,
+      "length": 211,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 278.9000000000005,
+      "termination": "terminated"
+    },
+    {
+      "episode": 42,
+      "length": 160,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 1
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 2,
+          "Collected/0": 1,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 2,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 0,
+          "Rescue/1": 1
+        }
+      },
+      "return": 289.00000000000045,
+      "termination": "terminated"
+    },
+    {
+      "episode": 43,
+      "length": 193,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 1,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 1,
+          "Rescue/1": 0
+        }
+      },
+      "return": 285.70000000000056,
+      "termination": "terminated"
+    },
+    {
+      "episode": 44,
+      "length": 197,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 2,
+          "Collected/0": 1,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 2,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 285.30000000000064,
+      "termination": "terminated"
+    },
+    {
+      "episode": 45,
+      "length": 191,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 3,
+          "Drain/0": 2,
+          "Drain/1": 0,
+          "Drain/2": 1,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 2,
+          "Collected/0": 1,
+          "Collected/1": 1,
+          "Permitted": 1,
+          "Permitted/0": 1,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 2,
+          "Rescue/0": 1,
+          "Rescue/1": 1
+        }
+      },
+      "return": 280.9000000000004,
+      "termination": "terminated"
+    },
+    {
+      "episode": 46,
+      "length": 225,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 1,
+          "Collected/1": 0,
+          "Permitted": 1,
+          "Permitted/0": 1,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 277.5000000000006,
+      "termination": "terminated"
+    },
+    {
+      "episode": 47,
+      "length": 194,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 1
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 2,
+          "Collected/0": 1,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 2,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 1,
+          "Rescue/1": 0
+        }
+      },
+      "return": 280.6000000000005,
+      "termination": "terminated"
+    },
+    {
+      "episode": 48,
+      "length": 220,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 1,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 283.0000000000006,
+      "termination": "terminated"
+    },
+    {
+      "episode": 49,
+      "length": 180,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 282.0000000000005,
+      "termination": "terminated"
+    },
+    {
+      "episode": 50,
+      "length": 285,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 1,
+          "Collected/1": 0,
+          "Permitted": 1,
+          "Permitted/0": 1,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 276.5000000000006,
+      "termination": "terminated"
+    },
+    {
+      "episode": 51,
+      "length": 229,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 3,
+          "Drain/0": 1,
+          "Drain/1": 1,
+          "Drain/2": 0,
+          "Drain/3": 1
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 2,
+          "Collected/0": 1,
+          "Collected/1": 1,
+          "Permitted": 1,
+          "Permitted/0": 0,
+          "Permitted/1": 1,
+          "Unpermitted": 1,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 2,
+          "Rescue/0": 1,
+          "Rescue/1": 1
+        }
+      },
+      "return": 277.1000000000003,
+      "termination": "terminated"
+    },
+    {
+      "episode": 52,
+      "length": 225,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 0,
+          "Drain/1": 1,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 1,
+          "Permitted/0": 0,
+          "Permitted/1": 1,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 1,
+          "Rescue/1": 0
+        }
+      },
+      "return": 277.50000000000085,
+      "termination": "terminated"
+    },
+    {
+      "episode": 53,
+      "length": 231,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 281.90000000000043,
+      "termination": "terminated"
+    },
+    {
+      "episode": 54,
+      "length": 230,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 2,
+          "Drain/0": 1,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 1
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 1,
+          "Collected/1": 0,
+          "Permitted": 1,
+          "Permitted/0": 1,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 2,
+          "Rescue/0": 1,
+          "Rescue/1": 1
+        }
+      },
+      "return": 282.00000000000085,
+      "termination": "terminated"
+    },
+    {
+      "episode": 55,
+      "length": 256,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 2,
+          "Collected/0": 1,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 2,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 279.4000000000002,
+      "termination": "terminated"
+    },
+    {
+      "episode": 56,
+      "length": 194,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 2,
+          "Collected/0": 1,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 2,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 280.59999999999985,
+      "termination": "terminated"
+    },
+    {
+      "episode": 57,
+      "length": 250,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 2,
+          "Drain/0": 0,
+          "Drain/1": 2,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 1,
+          "Collected/1": 0,
+          "Permitted": 1,
+          "Permitted/0": 1,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 1,
+          "Rescue/1": 0
+        }
+      },
+      "return": 275.00000000000085,
+      "termination": "terminated"
+    },
+    {
+      "episode": 58,
+      "length": 210,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 4,
+          "Drain/0": 2,
+          "Drain/1": 0,
+          "Drain/2": 2,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 2,
+          "Collected/0": 1,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 2,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 6,
+          "Rescue/0": 2,
+          "Rescue/1": 4
+        }
+      },
+      "return": 279.0000000000005,
+      "termination": "terminated"
+    },
+    {
+      "episode": 59,
+      "length": 232,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 276.8000000000003,
+      "termination": "terminated"
+    },
+    {
+      "episode": 60,
+      "length": 208,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 2,
+          "Collected/0": 1,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 2,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 284.2,
+      "termination": "terminated"
+    },
+    {
+      "episode": 61,
+      "length": 257,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 2,
+          "Collected/0": 1,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 2,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 274.30000000000086,
+      "termination": "terminated"
+    },
+    {
+      "episode": 62,
+      "length": 286,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 0,
+          "Drain/1": 1,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 2,
+          "Collected/0": 1,
+          "Collected/1": 1,
+          "Permitted": 1,
+          "Permitted/0": 0,
+          "Permitted/1": 1,
+          "Unpermitted": 1,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 1,
+          "Rescue/1": 0
+        }
+      },
+      "return": 271.40000000000083,
+      "termination": "terminated"
+    },
+    {
+      "episode": 63,
+      "length": 256,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 1,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 1,
+          "Permitted/0": 0,
+          "Permitted/1": 1,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 274.4000000000004,
+      "termination": "terminated"
+    },
+    {
+      "episode": 64,
+      "length": 231,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 1,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 1,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 1,
+          "Rescue/1": 0
+        }
+      },
+      "return": 276.9000000000008,
+      "termination": "terminated"
+    },
+    {
+      "episode": 65,
+      "length": 244,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 280.6000000000003,
+      "termination": "terminated"
+    },
+    {
+      "episode": 66,
+      "length": 279,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 1,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 1,
+          "Rescue/1": 0
+        }
+      },
+      "return": 272.1000000000007,
+      "termination": "terminated"
+    },
+    {
+      "episode": 67,
+      "length": 247,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 1,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 1,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 1,
+          "Rescue/1": 0
+        }
+      },
+      "return": 275.3000000000004,
+      "termination": "terminated"
+    },
+    {
+      "episode": 68,
+      "length": 239,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 1,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 1,
+          "Collected/1": 0,
+          "Permitted": 1,
+          "Permitted/0": 1,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 276.1000000000005,
+      "termination": "terminated"
+    },
+    {
+      "episode": 69,
+      "length": 200,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 1
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 2,
+          "Collected/0": 1,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 2,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 0,
+          "Rescue/1": 1
+        }
+      },
+      "return": 280.00000000000057,
+      "termination": "terminated"
+    },
+    {
+      "episode": 70,
+      "length": 221,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 282.90000000000043,
+      "termination": "terminated"
+    },
+    {
+      "episode": 71,
+      "length": 244,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 280.6000000000006,
+      "termination": "terminated"
+    },
+    {
+      "episode": 72,
+      "length": 199,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 2,
+          "Drain/0": 1,
+          "Drain/1": 0,
+          "Drain/2": 1,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 1,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 2,
+          "Rescue/0": 1,
+          "Rescue/1": 1
+        }
+      },
+      "return": 280.10000000000036,
+      "termination": "terminated"
+    },
+    {
+      "episode": 73,
+      "length": 238,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 281.2000000000004,
+      "termination": "terminated"
+    },
+    {
+      "episode": 74,
+      "length": 210,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 284.0000000000007,
+      "termination": "terminated"
+    },
+    {
+      "episode": 75,
+      "length": 261,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 278.9000000000005,
+      "termination": "terminated"
+    },
+    {
+      "episode": 76,
+      "length": 242,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 2,
+          "Collected/0": 1,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 2,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 275.8000000000003,
+      "termination": "terminated"
+    },
+    {
+      "episode": 77,
+      "length": 191,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 1,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 1,
+          "Rescue/1": 0
+        }
+      },
+      "return": 285.9000000000004,
+      "termination": "terminated"
+    },
+    {
+      "episode": 78,
+      "length": 186,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 2,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 2
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 2,
+          "Rescue/0": 0,
+          "Rescue/1": 2
+        }
+      },
+      "return": 286.4000000000004,
+      "termination": "terminated"
+    },
+    {
+      "episode": 79,
+      "length": 241,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 6,
+          "Drain/0": 1,
+          "Drain/1": 0,
+          "Drain/2": 3,
+          "Drain/3": 2
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 6,
+          "Rescue/0": 4,
+          "Rescue/1": 2
+        }
+      },
+      "return": 280.9000000000006,
+      "termination": "terminated"
+    },
+    {
+      "episode": 80,
+      "length": 226,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 3,
+          "Drain/0": 0,
+          "Drain/1": 1,
+          "Drain/2": 2,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 3,
+          "Rescue/0": 3,
+          "Rescue/1": 0
+        }
+      },
+      "return": 277.40000000000026,
+      "termination": "terminated"
+    },
+    {
+      "episode": 81,
+      "length": 234,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 276.6000000000007,
+      "termination": "terminated"
+    },
+    {
+      "episode": 82,
+      "length": 271,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 277.9000000000004,
+      "termination": "terminated"
+    },
+    {
+      "episode": 83,
+      "length": 198,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 280.2000000000003,
+      "termination": "terminated"
+    },
+    {
+      "episode": 84,
+      "length": 281,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 2,
+          "Drain/0": 1,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 1
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 1,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 2,
+          "Rescue/0": 0,
+          "Rescue/1": 2
+        }
+      },
+      "return": 276.9000000000009,
+      "termination": "terminated"
+    },
+    {
+      "episode": 85,
+      "length": 281,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 3,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 2,
+          "Drain/3": 1
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 1,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 3,
+          "Rescue/0": 0,
+          "Rescue/1": 3
+        }
+      },
+      "return": 271.90000000000083,
+      "termination": "terminated"
+    },
+    {
+      "episode": 86,
+      "length": 200,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 285.0000000000002,
+      "termination": "terminated"
+    },
+    {
+      "episode": 87,
+      "length": 213,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 278.7000000000004,
+      "termination": "terminated"
+    },
+    {
+      "episode": 88,
+      "length": 205,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 1,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 1,
+          "Collected/1": 0,
+          "Permitted": 1,
+          "Permitted/0": 1,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 0,
+          "Rescue/1": 1
+        }
+      },
+      "return": 279.5000000000002,
+      "termination": "terminated"
+    },
+    {
+      "episode": 89,
+      "length": 213,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 278.70000000000067,
+      "termination": "terminated"
+    },
+    {
+      "episode": 90,
+      "length": 273,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 272.70000000000107,
+      "termination": "terminated"
+    },
+    {
+      "episode": 91,
+      "length": 185,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 286.50000000000057,
+      "termination": "terminated"
+    },
+    {
+      "episode": 92,
+      "length": 219,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 1,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 1,
+          "Permitted/0": 0,
+          "Permitted/1": 1,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 278.10000000000053,
+      "termination": "terminated"
+    },
+    {
+      "episode": 93,
+      "length": 184,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 281.6,
+      "termination": "terminated"
+    },
+    {
+      "episode": 94,
+      "length": 222,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 2,
+          "Drain/0": 2,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 2,
+          "Collected/0": 1,
+          "Collected/1": 1,
+          "Permitted": 1,
+          "Permitted/0": 0,
+          "Permitted/1": 1,
+          "Unpermitted": 1,
+          "Unpermitted/0": 1,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 1,
+          "Rescue/1": 0
+        }
+      },
+      "return": 282.8000000000003,
+      "termination": "terminated"
+    },
+    {
+      "episode": 95,
+      "length": 205,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 2,
+          "Drain/0": 0,
+          "Drain/1": 2,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 3,
+          "Rescue/0": 1,
+          "Rescue/1": 2
+        }
+      },
+      "return": 279.5000000000006,
+      "termination": "terminated"
+    },
+    {
+      "episode": 96,
+      "length": 222,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 1,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 1
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 277.8000000000005,
+      "termination": "terminated"
+    },
+    {
+      "episode": 97,
+      "length": 241,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 1
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 1,
+          "Collected/1": 0,
+          "Permitted": 1,
+          "Permitted/0": 1,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 1,
+          "Rescue/0": 0,
+          "Rescue/1": 1
+        }
+      },
+      "return": 275.9000000000007,
+      "termination": "terminated"
+    },
+    {
+      "episode": 98,
+      "length": 272,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 0
+        },
+        "gardener/drain-v0": {
+          "Drain": 1,
+          "Drain/0": 1,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 1,
+          "Collected/0": 0,
+          "Collected/1": 1,
+          "Permitted": 1,
+          "Permitted/0": 0,
+          "Permitted/1": 1,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 272.80000000000103,
+      "termination": "terminated"
+    },
+    {
+      "episode": 99,
+      "length": 311,
+      "metrics": {
+        "score": 300
+      },
+      "monitor_counts": {
+        "gardener/collect-one-v0": {
+          "count": 1
+        },
+        "gardener/drain-v0": {
+          "Drain": 0,
+          "Drain/0": 0,
+          "Drain/1": 0,
+          "Drain/2": 0,
+          "Drain/3": 0
+        },
+        "gardener/permission-aware-v0": {
+          "Collected": 0,
+          "Collected/0": 0,
+          "Collected/1": 0,
+          "Permitted": 0,
+          "Permitted/0": 0,
+          "Permitted/1": 0,
+          "Unpermitted": 0,
+          "Unpermitted/0": 0,
+          "Unpermitted/1": 0
+        },
+        "gardener/rescue-v2": {
+          "Rescue": 0,
+          "Rescue/0": 0,
+          "Rescue/1": 0
+        }
+      },
+      "return": 268.90000000000117,
+      "termination": "terminated"
+    }
+  ],
+  "metadata": {
+    "episode_count": 100,
+    "experiment_id": "gardener-dqn-bolts-collection-rescue-1m-v0",
+    "model_sha256": null,
+    "model_source": "in-memory-policy",
+    "scheduled_thresholds": [
+      450000
+    ],
+    "seed": 10003,
+    "task_return_units": "unscaled task reward",
+    "timesteps": 450000
+  },
+  "schema_version": 5
+}

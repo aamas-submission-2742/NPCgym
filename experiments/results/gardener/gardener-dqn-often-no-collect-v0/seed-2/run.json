@@ -1,0 +1,164 @@
+{
+  "artifacts": {
+    "base": {
+      "path": "base.zip",
+      "sha256": "2b077abb368df19028b5947502a5f6b256f7bdc468b3299e071f640bc43271b0"
+    },
+    "evaluations": "evaluations",
+    "learning_curve": "learning_curve.csv",
+    "model": {
+      "path": "model.zip",
+      "sha256": "6f164cc5bcb244c7f4d12b52fc9099fe978101e716ff401c6d49a32d8845ecb9"
+    }
+  },
+  "completed_at": "2026-10-02T21:49:09.302340+00:00",
+  "configuration": {
+    "algorithm": {
+      "constructor_kwargs": {
+        "batch_size": 32,
+        "buffer_size": 1000000,
+        "device": "cpu",
+        "exploration_final_eps": 0.05,
+        "exploration_fraction": 0.1,
+        "exploration_initial_eps": 1.0,
+        "gamma": 0.95,
+        "gradient_steps": 1,
+        "learning_rate": 0.0001,
+        "learning_starts": 100,
+        "max_grad_norm": 10.0,
+        "policy_kwargs": {
+          "net_arch": [
+            64,
+            64
+          ]
+        },
+        "target_update_interval": 10000,
+        "tau": 1.0,
+        "train_freq": 4,
+        "verbose": 0
+      },
+      "execution_path": "sb3",
+      "id": "sb3/dqn-gardener-discount-095-v0",
+      "implementation": "stable_baselines3.DQN",
+      "optional_extra": "sb3",
+      "policy": "MlpPolicy"
+    },
+    "environment": {
+      "constructor_kwargs": {
+        "frog_freeze": 5,
+        "grass_respawn": 50,
+        "puddle_respawn": 20,
+        "score_limit": 300,
+        "size": 15
+      },
+      "family": "gardener",
+      "id": "gardener/size-15-v0",
+      "render_kwargs": {}
+    },
+    "experiment_id": "gardener-dqn-often-no-collect-v0",
+    "often": {
+      "batch_size": 256,
+      "evaluation_seed": 10000,
+      "final_expert_weight": 0.5,
+      "gradient_steps": -1,
+      "horizon": 1,
+      "margin": 5.0,
+      "norm_id": "gardener/no-collect-v0",
+      "pretraining_steps": 250000,
+      "radius": 4,
+      "teaching_seed_offset": 20000
+    },
+    "run": {
+      "deterministic_evaluation": true,
+      "evaluation_seed_offset": 10000,
+      "final_evaluation_episodes": 100,
+      "intermediate_evaluation_episodes": 100,
+      "intermediate_evaluation_frequency": 250000,
+      "learning_kwargs": {},
+      "max_episode_steps": 1000,
+      "task_return_units": "unscaled task reward",
+      "training_reward_transform": "illegal actions become stay with penalty -1",
+      "training_steps": 250000
+    },
+    "scenario": {
+      "id": "gardener/permission-drain-rescue-v0",
+      "monitor_ids": [
+        "gardener/permission-aware-v0",
+        "gardener/drain-v0",
+        "gardener/rescue-v1"
+      ]
+    },
+    "schema_version": 1,
+    "technique": {
+      "id": "technique/often-v0"
+    },
+    "wrappers": [
+      {
+        "id": "gardener/state-features-frogs-v0",
+        "kind": "observation"
+      },
+      {
+        "id": "gardener/illegal-to-stay-v0",
+        "kind": "action"
+      }
+    ]
+  },
+  "experiment_id": "gardener-dqn-often-no-collect-v0",
+  "failure": null,
+  "pretraining": {
+    "actual_steps": 250000,
+    "requested_steps": 250000,
+    "seconds": 87.83944588399027,
+    "updates": 62475
+  },
+  "provenance": {
+    "device": "cpu",
+    "git": {
+      "available": true,
+      "dirty": false,
+      "revision": null
+    },
+    "packages": {
+      "clingo": "5.8.2",
+      "gymnasium": "1.3.0",
+      "npc-gym": "0.1.0",
+      "numpy": "2.2.6",
+      "stable-baselines3": "2.9.0",
+      "torch": "2.14.1"
+    },
+    "python": "3.13.15"
+  },
+  "schema_version": 1,
+  "seed": 2,
+  "seeds": {
+    "final_evaluation": 10000,
+    "intermediate_evaluation": 10000,
+    "training": 2
+  },
+  "started_at": "2026-10-02T21:12:29.973222+00:00",
+  "status": "complete",
+  "teaching": {
+    "seconds": 1884.8125194690074,
+    "seed": 20002,
+    "stats": {
+      "expert_buffer_size": 124756,
+      "expert_episodes": 496,
+      "expert_fallbacks": 0,
+      "expert_interventions": 2533,
+      "expert_return": 133443.9999997038,
+      "expert_steps": 125000,
+      "filtered_steps": 940,
+      "ordinary_buffer_size": 124060,
+      "ordinary_episodes": 511,
+      "ordinary_fallbacks": 0,
+      "ordinary_interventions": 940,
+      "ordinary_return": 138449.99999968498,
+      "ordinary_steps": 125000,
+      "updates": 124900
+    }
+  },
+  "timesteps": {
+    "actual": 250000,
+    "requested": 250000
+  }
+}

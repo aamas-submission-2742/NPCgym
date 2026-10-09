@@ -1,0 +1,157 @@
+{
+  "algorithm": "dqn",
+  "checksum": "8a7fef37cd61aa19b0a2a47108fc02483271134c19afd277816e037da34ad467",
+  "comparison_with_original": {
+    "norm_mismatched_episode_counts": {},
+    "task_mismatched_episodes": []
+  },
+  "completed_at": "2026-10-07T03:10:33.495899+00:00",
+  "cpu_affinity": [
+    21
+  ],
+  "deterministic_evaluation": true,
+  "episodes": 1000,
+  "evaluation_seed": 10006,
+  "features": "complete",
+  "ghost_behavior": "random",
+  "layout_sha256": "5a7cce3f11ba3ae21f33b736a021d25f39455b2c8e841e9536b3334603cae35c",
+  "max_episode_steps": 300,
+  "monitor_ids": [
+    "pacman/vegan-v0",
+    "pacman/vegetarian-orange-v0",
+    "pacman/hungry-vegan-v0",
+    "pacman/trapped-v1",
+    "pacman/vegan-conflict-v1",
+    "pacman/hungry-vegan-penalty-v1"
+  ],
+  "schema_version": 1,
+  "seed": 5,
+  "source": "experiments/results/pacman/pacman-dqn-unconstrained-v0/seed-5",
+  "source_run": {
+    "artifacts": {
+      "evaluations": "evaluations",
+      "learning_curve": "learning_curve.csv",
+      "model": {
+        "path": "model.zip",
+        "sha256": "8a7fef37cd61aa19b0a2a47108fc02483271134c19afd277816e037da34ad467"
+      }
+    },
+    "completed_at": "2026-10-03T03:06:21.146468+00:00",
+    "configuration": {
+      "algorithm": {
+        "constructor_kwargs": {
+          "batch_size": 32,
+          "buffer_size": 1000000,
+          "device": "cpu",
+          "exploration_final_eps": 0.05,
+          "exploration_fraction": 0.1,
+          "exploration_initial_eps": 1.0,
+          "gamma": 0.99,
+          "gradient_steps": 1,
+          "learning_rate": 0.0001,
+          "learning_starts": 100,
+          "max_grad_norm": 10.0,
+          "optimize_memory_usage": false,
+          "policy_kwargs": null,
+          "replay_buffer_class": null,
+          "replay_buffer_kwargs": null,
+          "stats_window_size": 100,
+          "target_update_interval": 10000,
+          "tau": 1.0,
+          "train_freq": 4,
+          "verbose": 1
+        },
+        "execution_path": "sb3",
+        "id": "sb3/dqn-pacman-default-v0",
+        "implementation": "stable_baselines3.DQN",
+        "optional_extra": "sb3",
+        "policy": "MlpPolicy"
+      },
+      "environment": {
+        "constructor_kwargs": {
+          "dfas": null,
+          "features": "complete",
+          "layout": "smallClassic"
+        },
+        "family": "pacman",
+        "id": "pacman/small-classic-v0",
+        "render_kwargs": {}
+      },
+      "experiment_id": "pacman-dqn-unconstrained-v0",
+      "run": {
+        "deterministic_evaluation": true,
+        "evaluation_seed_offset": 10000,
+        "final_evaluation_episodes": 1000,
+        "intermediate_evaluation_episodes": 1000,
+        "intermediate_evaluation_frequency": 250000,
+        "learning_kwargs": {},
+        "max_episode_steps": 300,
+        "task_return_units": "unscaled task reward",
+        "training_reward_transform": "reward divided by 100",
+        "training_steps": 5000000
+      },
+      "scenario": {
+        "id": "pacman/baseline-norms-v3",
+        "monitor_ids": [
+          "pacman/vegan-v0",
+          "pacman/vegetarian-blue-v0",
+          "pacman/vegetarian-orange-v0",
+          "pacman/conditional-vegan-v0",
+          "pacman/penalty-v0",
+          "pacman/hungry-v0",
+          "pacman/hungry-vegan-v0",
+          "pacman/hungry-vegan-penalty-v1",
+          "pacman/vegan-preference-v0",
+          "pacman/hungry-vegetarian-v0",
+          "pacman/trapped-v1"
+        ]
+      },
+      "schema_version": 1,
+      "technique": {
+        "id": "technique/unconstrained-v0"
+      },
+      "wrappers": [
+        {
+          "id": "pacman/training-reward-divide-100-v0",
+          "kind": "reward"
+        }
+      ]
+    },
+    "experiment_id": "pacman-dqn-unconstrained-v0",
+    "failure": null,
+    "provenance": {
+      "device": "cpu",
+      "git": {
+        "available": true,
+        "dirty": false,
+        "revision": null
+      },
+      "packages": {
+        "gymnasium": "1.3.0",
+        "npc-gym": "0.1.0",
+        "numpy": "2.2.6",
+        "stable-baselines3": "2.9.0",
+        "torch": "2.14.1"
+      },
+      "python": "3.13.15"
+    },
+    "schema_version": 1,
+    "seed": 5,
+    "seeds": {
+      "final_evaluation": 10006,
+      "intermediate_evaluation": 10005,
+      "training": 5
+    },
+    "started_at": "2026-10-03T02:00:53.452201+00:00",
+    "status": "complete",
+    "timesteps": {
+      "actual": 5000000,
+      "requested": 5000000
+    },
+    "training_seconds": 2794.1680047519912
+  },
+  "started_at": "2026-10-07T03:09:56.052695+00:00",
+  "status": "complete",
+  "target": "experiments/results/pacman/pacman-dqn-unconstrained-v0/seed-5",
+  "task_return_units": "unscaled task reward"
+}

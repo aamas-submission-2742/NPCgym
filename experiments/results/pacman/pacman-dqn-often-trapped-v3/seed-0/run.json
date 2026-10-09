@@ -1,0 +1,409 @@
+{
+  "artifacts": {
+    "base": {
+      "path": "base.zip",
+      "sha256": "9e97e5f94562538f9d435749c12a7f468142a93fc6c6c93d35a9c95ee704f60e"
+    },
+    "evaluations": "evaluations",
+    "learning_curve": "learning_curve.csv",
+    "model": {
+      "path": "model.zip",
+      "sha256": "451b0a8dadf11c5e4bb6d665de3e56287ddb190126b9a7a82ba6b0615de32f16"
+    }
+  },
+  "completed_at": "2026-10-09T07:27:38.011282+00:00",
+  "configuration": {
+    "algorithm": {
+      "constructor_kwargs": {
+        "batch_size": 32,
+        "buffer_size": 1000000,
+        "device": "cpu",
+        "exploration_final_eps": 0.05,
+        "exploration_fraction": 0.1,
+        "exploration_initial_eps": 1.0,
+        "gamma": 0.99,
+        "gradient_steps": 1,
+        "learning_rate": 0.0001,
+        "learning_starts": 100,
+        "max_grad_norm": 10.0,
+        "optimize_memory_usage": false,
+        "policy_kwargs": null,
+        "replay_buffer_class": null,
+        "replay_buffer_kwargs": null,
+        "stats_window_size": 100,
+        "target_update_interval": 10000,
+        "tau": 1.0,
+        "train_freq": 4,
+        "verbose": 1
+      },
+      "execution_path": "sb3",
+      "id": "sb3/dqn-pacman-default-v0",
+      "implementation": "stable_baselines3.DQN",
+      "optional_extra": "sb3",
+      "policy": "MlpPolicy"
+    },
+    "environment": {
+      "constructor_kwargs": {
+        "dfas": null,
+        "features": "complete",
+        "layout": "smallClassic"
+      },
+      "family": "pacman",
+      "id": "pacman/small-classic-v0",
+      "render_kwargs": {}
+    },
+    "experiment_id": "pacman-dqn-often-trapped-v3",
+    "often": {
+      "evaluation_max_episode_steps": 300,
+      "evaluation_seed": 50000,
+      "horizon": 1,
+      "margin": 0.5,
+      "norm_id": "pacman/trapped-v1",
+      "pretraining_evaluation_frequency": 250000,
+      "pretraining_evaluation_seed_offset": 10000,
+      "pretraining_max_episode_steps": 300,
+      "pretraining_steps": 5000000,
+      "radius": 5,
+      "teaching_seed_offset": 20000
+    },
+    "run": {
+      "deterministic_evaluation": true,
+      "evaluation_seed_offset": 10000,
+      "final_evaluation_episodes": 1000,
+      "intermediate_evaluation_episodes": 1000,
+      "intermediate_evaluation_frequency": 1000000,
+      "learning_kwargs": {},
+      "max_episode_steps": 500,
+      "task_return_units": "unscaled task reward",
+      "training_reward_transform": "reward divided by 100",
+      "training_steps": 10000000
+    },
+    "scenario": {
+      "id": "pacman/trapped-v1",
+      "monitor_ids": [
+        "pacman/vegan-v0",
+        "pacman/vegetarian-orange-v0",
+        "pacman/hungry-vegan-v0",
+        "pacman/trapped-v1",
+        "pacman/vegan-conflict-v1",
+        "pacman/hungry-vegan-penalty-v1"
+      ]
+    },
+    "schema_version": 1,
+    "technique": {
+      "id": "technique/often-v0"
+    },
+    "wrappers": [
+      {
+        "id": "pacman/trapped-observation-v1",
+        "kind": "observation"
+      },
+      {
+        "id": "pacman/training-reward-divide-100-v0",
+        "kind": "reward"
+      }
+    ]
+  },
+  "evaluation_update": {
+    "curve_note": "The saved base and final policy were reevaluated at 300 steps (zero and 10M teaching transitions). Original 500-step diagnostics are retained in source_curves.",
+    "episode_limit": 300,
+    "finalizer_sha256": "166af46a1d21dbd58216da1f255d6241b518d390f36bed4858c4f997d5088e11",
+    "script_sha256": "f77597215ba81d133f066f625b192af6a0c7bc716e091927f20d5f79c6693be0",
+    "source_runs": [
+      {
+        "completed": [
+          "shared-base",
+          "trapped-base",
+          "trapped-fixes",
+          "trapped-often"
+        ],
+        "episodes_per_variant": 1000,
+        "evaluation_limit": 300,
+        "first_episode_seed": 50000,
+        "script_sha256": "0fd631ec439a627899ad993d00b1d95ef5edc30a5167948f05f451bd110f1908",
+        "seconds": 101.63170407398138,
+        "seed": 0,
+        "status": "complete"
+      }
+    ]
+  },
+  "experiment_id": "pacman-dqn-often-trapped-v3",
+  "failure": null,
+  "pretraining": {
+    "actual_steps": 5000000,
+    "max_episode_steps": 300,
+    "requested_steps": 5000000,
+    "seconds": 1681.1599986059882,
+    "seconds_include_evaluation": true,
+    "updates": 1249975
+  },
+  "provenance": {
+    "device": "cpu",
+    "git": {
+      "available": true,
+      "dirty": false,
+      "revision": null
+    },
+    "packages": {
+      "clingo": "5.8.2",
+      "gymnasium": "1.3.0",
+      "npc-gym": "0.1.0",
+      "numpy": "2.2.6",
+      "stable-baselines3": "2.9.0",
+      "torch": "2.14.1"
+    },
+    "python": "3.13.15"
+  },
+  "schema_version": 1,
+  "seed": 0,
+  "seeds": {
+    "final_evaluation": 50000,
+    "intermediate_evaluation": 50000,
+    "training": 0
+  },
+  "source_curves": {
+    "pretraining": {
+      "csv": "schema_version,timesteps,episodes,return_mean,return_std,length_mean,length_std,metric/blue_eaten_mean,metric/blue_eaten_std,metric/food_remaining_mean,metric/food_remaining_std,metric/lost_mean,metric/lost_std,metric/orange_eaten_mean,metric/orange_eaten_std,metric/score_mean,metric/score_std,metric/won_mean,metric/won_std,count/pacman%2Fhungry-vegan-penalty-v1/CTD_mean,count/pacman%2Fhungry-vegan-penalty-v1/CTD_std,count/pacman%2Fhungry-vegan-penalty-v1/Hungr_mean,count/pacman%2Fhungry-vegan-penalty-v1/Hungr_std,count/pacman%2Fhungry-vegan-penalty-v1/HungryVeganPenalty_mean,count/pacman%2Fhungry-vegan-penalty-v1/HungryVeganPenalty_std,count/pacman%2Fhungry-vegan-penalty-v1/VegetarianBlue_mean,count/pacman%2Fhungry-vegan-penalty-v1/VegetarianBlue_std,count/pacman%2Fhungry-vegan-penalty-v1/VegetarianOrange_mean,count/pacman%2Fhungry-vegan-penalty-v1/VegetarianOrange_std,count/pacman%2Fhungry-vegan-v0/Hungr_mean,count/pacman%2Fhungry-vegan-v0/Hungr_std,count/pacman%2Fhungry-vegan-v0/HungryVegan_mean,count/pacman%2Fhungry-vegan-v0/HungryVegan_std,count/pacman%2Fhungry-vegan-v0/VegetarianBlue_mean,count/pacman%2Fhungry-vegan-v0/VegetarianBlue_std,count/pacman%2Fhungry-vegan-v0/VegetarianOrange_mean,count/pacman%2Fhungry-vegan-v0/VegetarianOrange_std,count/pacman%2Ftrapped-v1/count_mean,count/pacman%2Ftrapped-v1/count_std,count/pacman%2Fvegan-conflict-v1/OblBlue_mean,count/pacman%2Fvegan-conflict-v1/OblBlue_std,count/pacman%2Fvegan-conflict-v1/VeganConflict_mean,count/pacman%2Fvegan-conflict-v1/VeganConflict_std,count/pacman%2Fvegan-conflict-v1/VegetarianBlue_mean,count/pacman%2Fvegan-conflict-v1/VegetarianBlue_std,count/pacman%2Fvegan-conflict-v1/VegetarianOrange_mean,count/pacman%2Fvegan-conflict-v1/VegetarianOrange_std,count/pacman%2Fvegan-v0/Vegan_mean,count/pacman%2Fvegan-v0/Vegan_std,count/pacman%2Fvegan-v0/VegetarianBlue_mean,count/pacman%2Fvegan-v0/VegetarianBlue_std,count/pacman%2Fvegan-v0/VegetarianOrange_mean,count/pacman%2Fvegan-v0/VegetarianOrange_std,count/pacman%2Fvegetarian-orange-v0/count_mean,count/pacman%2Fvegetarian-orange-v0/count_std\n4,0,1000,-510.947,52.83741279623748,58.437,52.17438098339069,0.0,0.0,50.101,2.1851313461666324,1.0,0.0,0.0,0.0,-510.947,52.83741279623748,0.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,50.255,37.5295347026845,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0\n4,1000000,1000,1337.689,594.7385797802258,130.101,59.6783779856658,1.75,0.4642197755374064,5.721,12.945700405926285,0.207,0.4051555256935292,1.665,0.566370020393029,1337.689,594.7385797802258,0.791,0.4065943924846972,3.142,1.0381888074912,0.648,0.47968322880834596,7.205,1.8376547553879645,1.75,0.4642197755374064,1.665,0.566370020393029,0.648,0.47968322880834596,4.063,0.9322183220683876,1.75,0.4642197755374064,1.665,0.566370020393029,5.12,6.8187682172075625,0.238,0.6688467686996776,3.653,1.0717233784890576,1.75,0.4642197755374064,1.665,0.566370020393029,3.415,0.8250909040826956,1.75,0.4642197755374064,1.665,0.566370020393029,1.665,0.566370020393029\n4,2000000,1000,1437.956,569.1433668804373,108.204,38.806241559831584,1.761,0.47526729321509176,4.524,11.753698311595377,0.165,0.3711805490593493,1.771,0.50848697131785,1437.956,569.1433668804373,0.835,0.3711805490593493,3.334,0.9992216971223153,0.669,0.47057305490221174,7.535,1.8079753870006086,1.761,0.47526729321509176,1.771,0.50848697131785,0.669,0.47057305490221174,4.201,0.9287620793292543,1.761,0.47526729321509176,1.771,0.50848697131785,5.386,6.343422104826384,0.202,0.6254566331889047,3.734,1.0291958025565398,1.761,0.47526729321509176,1.771,0.50848697131785,3.532,0.8068308372887095,1.761,0.47526729321509176,1.771,0.50848697131785,1.771,0.50848697131785\n4,3000000,1000,1462.94,553.340204937252,110.42,39.546044049942594,1.851,0.3831435762217605,4.744,11.845525062233417,0.165,0.3711805490593493,1.828,0.4409262976961116,1462.94,553.340204937252,0.835,0.3711805490593493,3.388,1.0007277352007389,0.657,0.47471149132920726,7.724,1.6690787878347744,1.851,0.3831435762217605,1.828,0.4409262976961116,0.657,0.47471149132920726,4.336,0.8056699075924333,1.851,0.3831435762217605,1.828,0.4409262976961116,4.227,4.663418381402209,0.259,0.6811159959948085,3.938,0.9623699912195932,1.851,0.3831435762217605,1.828,0.4409262976961116,3.679,0.7099006972809648,1.851,0.3831435762217605,1.828,0.4409262976961116,1.828,0.4409262976961116\n4,4000000,1000,1441.501,587.4114758829623,106.279,38.18021947291555,1.799,0.4545316270624081,4.942,12.155518746643436,0.171,0.3765089640367145,1.792,0.47826352568432395,1441.501,587.4114758829623,0.829,0.3765089640367145,3.401,0.9809174277175424,0.657,0.47471149132920726,7.649,1.817635552029064,1.799,0.4545316270624081,1.792,0.47826352568432395,0.657,0.47471149132920726,4.248,0.9521008349959578,1.799,0.4545316270624081,1.792,0.47826352568432395,4.548,5.192272720110145,0.268,0.7363260147516181,3.859,1.0821825169535868,1.799,0.4545316270624081,1.792,0.47826352568432395,3.591,0.8097647806616437,1.799,0.4545316270624081,1.792,0.47826352568432395,1.792,0.47826352568432395\n4,5000000,1000,1438.106,585.6049664782565,109.764,43.70455701640277,1.811,0.42811096692329664,5.133,12.443203405875837,0.176,0.38082016753318093,1.815,0.46559102225021476,1438.106,585.6049664782565,0.824,0.38082016753318093,3.313,1.0153969667080949,0.659,0.474045356479736,7.598,1.7978865370206207,1.811,0.42811096692329664,1.815,0.46559102225021476,0.659,0.474045356479736,4.285,0.9304703111867675,1.811,0.42811096692329664,1.815,0.46559102225021476,4.696,5.316538723643419,0.285,0.8110332915485036,3.911,1.1309637483137998,1.811,0.42811096692329664,1.815,0.46559102225021476,3.626,0.7823835376591203,1.811,0.42811096692329664,1.815,0.46559102225021476,1.815,0.46559102225021476\n",
+      "episode_limit": 500,
+      "path": "experiments/output/pacman-trapped-standard-base-often-gamma099-10m-500/bases/seed-0/learning_curve.csv",
+      "sha256": "b8207a50ca99fbe86a2594686ee68f748aebf592e13140ce17009b0272bfcd2a"
+    },
+    "teaching": {
+      "csv": "schema_version,timesteps,episodes,return_mean,return_std,length_mean,length_std,metric/blue_eaten_mean,metric/blue_eaten_std,metric/food_remaining_mean,metric/food_remaining_std,metric/lost_mean,metric/lost_std,metric/orange_eaten_mean,metric/orange_eaten_std,metric/score_mean,metric/score_std,metric/won_mean,metric/won_std,count/pacman%2Fhungry-vegan-penalty-v1/CTD_mean,count/pacman%2Fhungry-vegan-penalty-v1/CTD_std,count/pacman%2Fhungry-vegan-penalty-v1/Hungr_mean,count/pacman%2Fhungry-vegan-penalty-v1/Hungr_std,count/pacman%2Fhungry-vegan-penalty-v1/HungryVeganPenalty_mean,count/pacman%2Fhungry-vegan-penalty-v1/HungryVeganPenalty_std,count/pacman%2Fhungry-vegan-penalty-v1/VegetarianBlue_mean,count/pacman%2Fhungry-vegan-penalty-v1/VegetarianBlue_std,count/pacman%2Fhungry-vegan-penalty-v1/VegetarianOrange_mean,count/pacman%2Fhungry-vegan-penalty-v1/VegetarianOrange_std,count/pacman%2Fhungry-vegan-v0/Hungr_mean,count/pacman%2Fhungry-vegan-v0/Hungr_std,count/pacman%2Fhungry-vegan-v0/HungryVegan_mean,count/pacman%2Fhungry-vegan-v0/HungryVegan_std,count/pacman%2Fhungry-vegan-v0/VegetarianBlue_mean,count/pacman%2Fhungry-vegan-v0/VegetarianBlue_std,count/pacman%2Fhungry-vegan-v0/VegetarianOrange_mean,count/pacman%2Fhungry-vegan-v0/VegetarianOrange_std,count/pacman%2Ftrapped-v1/count_mean,count/pacman%2Ftrapped-v1/count_std,count/pacman%2Fvegan-conflict-v1/OblBlue_mean,count/pacman%2Fvegan-conflict-v1/OblBlue_std,count/pacman%2Fvegan-conflict-v1/VeganConflict_mean,count/pacman%2Fvegan-conflict-v1/VeganConflict_std,count/pacman%2Fvegan-conflict-v1/VegetarianBlue_mean,count/pacman%2Fvegan-conflict-v1/VegetarianBlue_std,count/pacman%2Fvegan-conflict-v1/VegetarianOrange_mean,count/pacman%2Fvegan-conflict-v1/VegetarianOrange_std,count/pacman%2Fvegan-v0/Vegan_mean,count/pacman%2Fvegan-v0/Vegan_std,count/pacman%2Fvegan-v0/VegetarianBlue_mean,count/pacman%2Fvegan-v0/VegetarianBlue_std,count/pacman%2Fvegan-v0/VegetarianOrange_mean,count/pacman%2Fvegan-v0/VegetarianOrange_std,count/pacman%2Fvegetarian-orange-v0/count_mean,count/pacman%2Fvegetarian-orange-v0/count_std\n4,0,1000,1438.106,585.6049664782565,109.764,43.70455701640277,1.811,0.42811096692329664,5.133,12.443203405875837,0.176,0.38082016753318093,1.815,0.46559102225021476,1438.106,585.6049664782565,0.824,0.38082016753318093,3.313,1.0153969667080949,0.659,0.474045356479736,7.598,1.7978865370206207,1.811,0.42811096692329664,1.815,0.46559102225021476,0.659,0.474045356479736,4.285,0.9304703111867675,1.811,0.42811096692329664,1.815,0.46559102225021476,4.696,5.316538723643419,0.285,0.8110332915485036,3.911,1.1309637483137998,1.811,0.42811096692329664,1.815,0.46559102225021476,3.626,0.7823835376591203,1.811,0.42811096692329664,1.815,0.46559102225021476,1.815,0.46559102225021476\n4,1000000,1000,533.664,458.48159298275,323.626,166.89058728400474,1.514,0.6097573287792448,13.281,12.411528471546122,0.535,0.4987734956871706,1.564,0.6147389689941577,533.664,458.48159298275,0.184,0.3874841932259947,2.75,1.0037429949942365,0.658,0.47437959483940706,6.486,1.85951714162575,1.514,0.6097573287792448,1.564,0.6147389689941577,0.658,0.47437959483940706,3.736,0.9991516401427764,1.514,0.6097573287792448,1.564,0.6147389689941577,5.986,9.533509532171246,0.333,0.7874712693171733,3.411,1.161068042795081,1.514,0.6097573287792448,1.564,0.6147389689941577,3.078,0.8808609424875189,1.514,0.6097573287792448,1.564,0.6147389689941577,1.564,0.6147389689941577\n4,2000000,1000,184.204,446.9483777619066,238.856,193.06443811328901,1.156,0.7560846513453371,25.874,15.192699694261057,0.702,0.45737949232557423,1.133,0.7136602833281392,184.204,446.9483777619066,0.05,0.21794494717703367,1.877,1.1856943113635994,0.596,0.5106701479428771,4.762,2.3029016479215954,1.156,0.7560846513453371,1.133,0.7136602833281392,0.596,0.5106701479428771,2.885,1.2616556582522824,1.156,0.7560846513453371,1.133,0.7136602833281392,3.717,16.608459019427418,0.233,0.7474697318286541,2.522,1.4048188495318534,1.156,0.7560846513453371,1.133,0.7136602833281392,2.289,1.2146929653208667,1.156,0.7560846513453371,1.133,0.7136602833281392,1.133,0.7136602833281392\n4,3000000,1000,63.902,454.1357642776001,191.218,178.1583410228104,0.96,0.7432361670424819,29.688,14.429506436465525,0.798,0.40149221661197865,0.945,0.7835655684114763,63.902,454.1357642776001,0.04,0.19595917942265426,1.548,1.2073508189420339,0.687,0.5206063772179514,4.14,2.3652484013312427,0.96,0.7432361670424819,0.945,0.7835655684114763,0.687,0.5206063772179514,2.592,1.2835637888317044,0.96,0.7432361670424819,0.945,0.7835655684114763,0.088,1.701839005311607,0.257,0.7943242411005722,2.162,1.5791630694769936,0.96,0.7432361670424819,0.945,0.7835655684114763,1.905,1.305363933928006,0.96,0.7432361670424819,0.945,0.7835655684114763,0.945,0.7835655684114763\n4,4000000,1000,71.089,449.0127916652264,196.251,180.90549466226835,0.976,0.7532755140053339,29.206,14.773068875490969,0.794,0.4044304637388237,0.971,0.7975957622756029,71.089,449.0127916652264,0.035,0.18377975949489106,1.572,1.2445143631151871,0.687,0.5186819834927756,4.206,2.4098887941147824,0.976,0.7532755140053339,0.971,0.7975957622756029,0.687,0.5186819834927756,2.634,1.29152777747906,0.976,0.7532755140053339,0.971,0.7975957622756029,0.064,0.997949898542006,0.243,0.7899056905732481,2.19,1.5918228544659108,0.976,0.7532755140053339,0.971,0.7975957622756029,1.947,1.3327381588294078,0.976,0.7532755140053339,0.971,0.7975957622756029,0.971,0.7975957622756029\n4,5000000,1000,70.958,437.9218905649728,194.212,180.33562891453258,0.988,0.750903455845024,29.413,14.601110608443454,0.795,0.403701622488689,0.966,0.7802845634766844,70.958,437.9218905649728,0.032,0.176,1.587,1.2265524856279082,0.681,0.5091551826309931,4.222,2.3930557870638953,0.988,0.750903455845024,0.966,0.7802845634766844,0.681,0.5091551826309931,2.635,1.2852139899643171,0.988,0.750903455845024,0.966,0.7802845634766844,0.051,0.8720086008750143,0.206,0.6823225043921679,2.16,1.500133327407934,0.988,0.750903455845024,0.966,0.7802845634766844,1.954,1.3037959963123065,0.988,0.750903455845024,0.966,0.7802845634766844,0.966,0.7802845634766844\n4,6000000,1000,63.518,431.567577183458,192.152,179.56714314150014,0.986,0.7574985148500293,29.493,14.62586582052495,0.805,0.3962007067131506,0.957,0.77533928057335,63.518,431.567577183458,0.029,0.16780643611018023,1.55,1.2375378782081783,0.682,0.5107602177147316,4.175,2.402160485895978,0.986,0.7574985148500293,0.957,0.77533928057335,0.682,0.5107602177147316,2.625,1.291655913933738,0.986,0.7574985148500293,0.957,0.77533928057335,0.011,0.17572421574728966,0.222,0.7474730764382086,2.165,1.5250491795348764,0.986,0.7574985148500293,0.957,0.77533928057335,1.943,1.3052781312808392,0.986,0.7574985148500293,0.957,0.77533928057335,0.957,0.77533928057335\n4,7000000,1000,64.761,428.14263730560634,191.719,178.42340104089484,0.991,0.7502792813346241,29.442,14.616792945102562,0.81,0.3923009049186606,0.971,0.7734073958787826,64.761,428.14263730560634,0.028,0.16497272501841023,1.567,1.2294352361958722,0.674,0.4977187961088068,4.203,2.3945335662713103,0.991,0.7502792813346241,0.971,0.7734073958787826,0.674,0.4977187961088068,2.636,1.2920928759187553,0.991,0.7502792813346241,0.971,0.7734073958787826,0.012,0.1409113196304683,0.223,0.7505138239899383,2.185,1.503587376908971,0.991,0.7502792813346241,0.971,0.7734073958787826,1.962,1.2894014115084564,0.991,0.7502792813346241,0.971,0.7734073958787826,0.971,0.7734073958787826\n4,8000000,1000,54.293,425.2814728518043,188.137,175.43315031943078,0.967,0.7442519734606016,29.877,14.384779143247211,0.819,0.38501818138887933,0.964,0.7750509660661032,54.293,425.2814728518043,0.029,0.16780643611018023,1.527,1.217074771737546,0.673,0.5000709949597157,4.131,2.3895269406307182,0.967,0.7442519734606016,0.964,0.7750509660661032,0.673,0.5000709949597157,2.604,1.2927428205176774,0.967,0.7442519734606016,0.964,0.7750509660661032,0.007,0.12227428184209466,0.197,0.6709627411414139,2.128,1.4517630660682892,0.967,0.7442519734606016,0.964,0.7750509660661032,1.931,1.2822788308320465,0.967,0.7442519734606016,0.964,0.7750509660661032,0.964,0.7750509660661032\n4,9000000,1000,63.593,432.134265421061,195.057,178.1162534722758,0.984,0.7468226027645387,29.525,14.767578508340492,0.808,0.3938730760029175,0.978,0.7716968316638342,63.593,432.134265421061,0.031,0.17331762749357033,1.548,1.2098330463332534,0.676,0.5010229535660018,4.186,2.365883344545965,0.984,0.7468226027645387,0.978,0.7716968316638342,0.676,0.5010229535660018,2.638,1.2841168171159507,0.984,0.7468226027645387,0.978,0.7716968316638342,0.008,0.13392535234226566,0.216,0.7330375160931397,2.178,1.4940937052273529,0.984,0.7468226027645387,0.978,0.7716968316638342,1.962,1.276148894134223,0.984,0.7468226027645387,0.978,0.7716968316638342,0.978,0.7716968316638342\n4,10000000,1000,65.697,431.5574737981026,196.543,178.55144399024053,0.989,0.7502526241207024,29.496,14.64697866455741,0.803,0.39773232204587045,0.977,0.7697213781622543,65.697,431.5574737981026,0.031,0.17331762749357033,1.56,1.2150720143267228,0.674,0.5017210380281059,4.2,2.37823463939116,0.989,0.7502526241207024,0.977,0.7697213781622543,0.674,0.5017210380281059,2.64,1.2885650934275692,0.989,0.7502526241207024,0.977,0.7697213781622543,0.001,0.03160696125855822,0.206,0.7138375165259949,2.172,1.4827056349795127,0.989,0.7502526241207024,0.977,0.7697213781622543,1.966,1.2770450266141755,0.989,0.7502526241207024,0.977,0.7697213781622543,0.977,0.7697213781622543\n",
+      "episode_limit": 500,
+      "path": "experiments/output/pacman-trapped-standard-base-often-gamma099-10m-500/trapped/seed-0/learning_curve.csv",
+      "sha256": "ce64195a4f7104af1e5d1316ae46b2c986f0ca73e1ad8e982e0ff418b2eeabe0"
+    }
+  },
+  "source_runs": {
+    "pretraining": {
+      "additional_observation": "Trapped restriction-active flag",
+      "algorithm_parameters": {
+        "batch_size": 32,
+        "buffer_size": 1000000,
+        "device": "cpu",
+        "exploration_final_eps": 0.05,
+        "exploration_fraction": 0.1,
+        "exploration_initial_eps": 1.0,
+        "gamma": 0.99,
+        "gradient_steps": 1,
+        "learning_rate": 0.0001,
+        "learning_starts": 100,
+        "max_grad_norm": 10.0,
+        "optimize_memory_usage": false,
+        "policy_kwargs": null,
+        "replay_buffer_class": null,
+        "replay_buffer_kwargs": null,
+        "stats_window_size": 100,
+        "target_update_interval": 10000,
+        "tau": 1.0,
+        "train_freq": 4,
+        "verbose": 1
+      },
+      "artifacts": {
+        "model": {
+          "path": "model.zip",
+          "sha256": "9e97e5f94562538f9d435749c12a7f468142a93fc6c6c93d35a9c95ee704f60e"
+        }
+      },
+      "base_mean_metrics": {
+        "blue_eaten": 1.811,
+        "food_remaining": 5.133,
+        "lost": 0.176,
+        "orange_eaten": 1.815,
+        "score": 1438.106,
+        "won": 0.824
+      },
+      "base_mean_return": 1438.106,
+      "blocked_move_training_penalty": 0,
+      "cpu": 8,
+      "evaluation_limit": 500,
+      "feature_count": 64,
+      "native_actions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "provenance": {
+        "device": "cpu",
+        "git": {
+          "available": true,
+          "dirty": false,
+          "revision": null
+        },
+        "packages": {
+          "gymnasium": "1.3.0",
+          "npc-gym": "0.1.0",
+          "numpy": "2.2.6",
+          "stable-baselines3": "2.9.0",
+          "torch": "2.14.1"
+        },
+        "python": "3.13.15"
+      },
+      "reward_transform": "task reward / 100",
+      "script_sha256": "b643b9349a5ecdb16a4a8d1755aec5d49db6c98022de400442a14e3536f74e6e",
+      "seed": 0,
+      "started_unix": 1791523390.1464853,
+      "status": "complete",
+      "timesteps": {
+        "actual": 5000000,
+        "requested": 5000000
+      },
+      "total_seconds": 1681.1599986059882,
+      "training_limit": 300,
+      "training_steps": 5000000
+    },
+    "teaching": {
+      "actual_teaching_steps": 10000000,
+      "base_checkpoint": "experiments/output/pacman-trapped-standard-base-often-gamma099-10m-500/bases/seed-0/model.zip",
+      "base_checkpoint_sha256": "9e97e5f94562538f9d435749c12a7f468142a93fc6c6c93d35a9c95ee704f60e",
+      "base_run": "experiments/output/pacman-trapped-standard-base-often-gamma099-10m-500/bases/seed-0/run.json",
+      "base_run_sha256": "0e486c9b3c6239d3edfa67aad2c932e5157e26241886d9704b277d96e27ec9da",
+      "base_training_steps": 5000000,
+      "checkpoint_sha256": "451b0a8dadf11c5e4bb6d665de3e56287ddb190126b9a7a82ba6b0615de32f16",
+      "completed_evaluations": [
+        0,
+        1000000,
+        2000000,
+        3000000,
+        4000000,
+        5000000,
+        6000000,
+        7000000,
+        8000000,
+        9000000,
+        10000000
+      ],
+      "cpu": 8,
+      "current_teaching_steps": 10000000,
+      "evaluation": {
+        "all_monitors": true,
+        "deterministic": true,
+        "episodes_per_seed": 1000,
+        "first_episode_seed": 50000,
+        "frequency": 1000000,
+        "task_return_units": "unscaled task reward"
+      },
+      "evaluation_seconds": 406.90110761200776,
+      "model_base_timesteps": 5000000,
+      "norm": "trapped",
+      "provenance": {
+        "device": "cpu",
+        "git": {
+          "available": true,
+          "dirty": false,
+          "revision": null
+        },
+        "packages": {
+          "clingo": "5.8.2",
+          "gymnasium": "1.3.0",
+          "npc-gym": "0.1.0",
+          "numpy": "2.2.6",
+          "stable-baselines3": "2.9.0",
+          "torch": "2.14.1"
+        },
+        "python": "3.13.15"
+      },
+      "script_sha256": "899b4ec5edd40eb66cee3dbc610ca58028537166673028fc003f9ba077c43f03",
+      "seed": 0,
+      "started_unix": 1791525072.5271907,
+      "status": "complete",
+      "teaching_seconds": 5378.582983317989,
+      "teaching_stats": {
+        "expert_buffer_size": 999796,
+        "expert_episodes": 30847,
+        "expert_fallbacks": 0,
+        "expert_interventions": 56152,
+        "expert_return": -10113.100000828901,
+        "expert_steps": 5000000,
+        "filtered_steps": 26111,
+        "ordinary_buffer_size": 999398,
+        "ordinary_episodes": 29374,
+        "ordinary_fallbacks": 0,
+        "ordinary_interventions": 26111,
+        "ordinary_return": -356.10000031183455,
+        "ordinary_steps": 5000000,
+        "updates": 1249975
+      },
+      "total_seconds": 5785.484091319988,
+      "training": {
+        "algorithm_parameters": {
+          "batch_size": 32,
+          "buffer_size": 1000000,
+          "device": "cpu",
+          "exploration_final_eps": 0.05,
+          "exploration_fraction": 0.1,
+          "exploration_initial_eps": 1.0,
+          "gamma": 0.99,
+          "gradient_steps": 1,
+          "learning_rate": 0.0001,
+          "learning_starts": 100,
+          "max_grad_norm": 10.0,
+          "optimize_memory_usage": false,
+          "policy_kwargs": null,
+          "replay_buffer_class": null,
+          "replay_buffer_kwargs": null,
+          "stats_window_size": 100,
+          "target_update_interval": 10000,
+          "tau": 1.0,
+          "train_freq": 4,
+          "verbose": 1
+        },
+        "combined_steps": 10000000,
+        "episode_limit": 500,
+        "expert_final_weight": 1.0,
+        "expert_initial_weight": 0.1,
+        "filter_replay": true,
+        "gamma": 0.99,
+        "native_actions": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "parallel_streams": 2,
+        "planner": {
+          "evaluation_seed": 50000,
+          "horizon": 1,
+          "margin": 0.5,
+          "norm_id": "pacman/trapped-v1",
+          "pretraining_steps": 5000000,
+          "radius": 5,
+          "teaching_seed_offset": 20000
+        },
+        "reward_transform": "task reward / 100",
+        "schedule_steps": 10000000,
+        "use_action_mask": false
+      }
+    }
+  },
+  "started_at": "2026-10-09T05:51:12.527191+00:00",
+  "status": "complete",
+  "teaching": {
+    "seconds": 5378.582983317989,
+    "seed": 20000,
+    "stats": {
+      "expert_buffer_size": 999796,
+      "expert_episodes": 30847,
+      "expert_fallbacks": 0,
+      "expert_interventions": 56152,
+      "expert_return": -10113.100000828901,
+      "expert_steps": 5000000,
+      "filtered_steps": 26111,
+      "ordinary_buffer_size": 999398,
+      "ordinary_episodes": 29374,
+      "ordinary_fallbacks": 0,
+      "ordinary_interventions": 26111,
+      "ordinary_return": -356.10000031183455,
+      "ordinary_steps": 5000000,
+      "updates": 1249975
+    }
+  },
+  "timesteps": {
+    "actual": 10000000,
+    "requested": 10000000
+  }
+}

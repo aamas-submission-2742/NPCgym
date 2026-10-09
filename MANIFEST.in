@@ -1,0 +1,19 @@
+include README.md
+include THIRD_PARTY_NOTICES.md
+include environment.yml
+include environment-paper.yml
+include pyproject.toml
+include shell.nix
+exclude envs.png
+recursive-include docs *.py *.rst
+recursive-include examples *.py
+recursive-include experiments *.py
+exclude experiments/layouts/smallClassic.lay
+prune experiments/output
+recursive-include tests *.py
+include tests/monitors/episode_counts.json
+include tests/policy_fixes/fixtures/often_pacman.lp
+include tests/integrations/fixtures/often_update.json
+global-exclude *.py[cod]
+global-exclude __pycache__
+recursive-include tools pacman_*.py

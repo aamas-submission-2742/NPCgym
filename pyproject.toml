@@ -1,0 +1,201 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "npc-gym"
+version = "0.1.0"
+description = "Normative reinforcement-learning environments and evaluation tools"
+readme = "README.md"
+license-files = ["THIRD_PARTY_NOTICES.md"]
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "gymnasium>=1.3,<1.4",
+    "numpy>=2.0,<3",
+]
+
+[project.optional-dependencies]
+asp = ["clingo>=5.7,<6"]
+ltlf = ["ltlf2dfa>=2.0,<2.1"]
+render = ["pillow>=11,<12", "pygame>=2.6,<3"]
+sb3 = ["stable-baselines3>=2.6,<3"]
+optuna = ["optuna>=4.0,<5"]
+plots = ["matplotlib>=3.10,<4", "pandas>=3.0,<4"]
+test = ["pytest>=8,<10", "pytest-cov>=6,<8"]
+dev = ["build>=1.2,<2", "mypy>=1.15,<2", "pandas-stubs>=3,<4", "ruff>=0.11,<1", "tox>=4.20,<5"]
+docs = ["sphinx>=8,<10"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+npc_gym = [
+    "py.typed",
+    "policy_fixes/*.lp",
+    "envs/merchant/merchant_layouts/*.txt",
+    "envs/pacman/layouts/*.lay",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests", "."]
+addopts = "-ra --strict-markers"
+
+[tool.coverage.run]
+branch = true
+source = ["npc_gym"]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+[tool.mypy]
+python_version = "3.11"
+strict = true
+disallow_any_unimported = true
+files = ["src/npc_gym", "examples", "experiments", "tests/typing"]
+exclude = ["^experiments/output/"]
+mypy_path = "src"
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+env_list = tests, ltlf, asp, often, lint, format, typing, examples, learning-smoke, experiments, plots, docs, package
+isolated_build = true
+
+[testenv]
+description = run the fast test suite with visible coverage
+extras = test,render,sb3,optuna,plots
+commands =
+    python -m pytest --cov=npc_gym --cov-report=term-missing {posargs}
+    pytest {posargs}
+
+[testenv:ltlf]
+description = compile LTLf formulas with MONA and verify reference parity and installed artifacts
+extras = ltlf,test,render
+deps = build>=1.2,<2
+set_env = NPC_GYM_REQUIRE_LTLF=1
+commands =
+    python -m pytest -q tests/ltlf
+    python -m build --outdir {envtmpdir}/dist .
+    python tests/package_smoke.py {envtmpdir}/dist --ltlf
+
+[testenv:lint]
+description = run Ruff lint checks
+skip_install = true
+deps = ruff>=0.11,<1
+commands = ruff check src/npc_gym tests examples experiments
+
+[testenv:asp]
+description = exercise real ASP solving and installed-wheel planning resources
+extras = asp,test,render
+deps = build>=1.2,<2
+set_env = NPC_GYM_REQUIRE_ASP=1
+commands =
+    python -m pytest -q tests/policy_fixes tests/examples/test_taxi_policy_fixes.py tests/examples/test_merchant_policy_fixes.py tests/integrations/test_storm_taxi_learning.py
+    python -m build --outdir {envtmpdir}/dist .
+    python tests/package_smoke.py {envtmpdir}/dist --asp
+
+[testenv:often]
+description = exercise CPU DQN OFTEN with real ASP and installed-wheel inference
+extras = asp,sb3,test,render
+deps = build>=1.2,<2
+set_env =
+    NPC_GYM_REQUIRE_OFTEN=1
+    OMP_NUM_THREADS=1
+    MKL_NUM_THREADS=1
+    CUDA_VISIBLE_DEVICES=
+commands =
+    python -m pytest -q tests/integrations/test_dqn_often.py tests/integrations/test_optional_imports.py tests/examples/test_pacman_often.py tests/examples/test_sb3_examples.py
+    python -m build --outdir {envtmpdir}/dist .
+    python tests/package_smoke.py {envtmpdir}/dist --often
+
+[testenv:format]
+description = check Ruff formatting
+skip_install = true
+deps = ruff>=0.11,<1
+commands = ruff format --check src/npc_gym tests examples experiments
+
+[testenv:typing]
+description = type-check the library, examples, and experiment utilities
+# NumPy pin: newer stubs need a Python 3.12+ target. Keep in step with
+# environment.yml and shell.nix.
+# Resolve Pygame's Surface stubs used by the shared presentation helper.
+# Resolve the optional integration bases and public trial API.
+extras = render,sb3,optuna,plots,ltlf,asp
+deps =
+    mypy>=1.15,<2
+    numpy>=2,<2.3
+    pandas-stubs>=3,<4
+commands = mypy
+
+[testenv:examples]
+description = execute standalone smoke examples outside the checkout against the installed package
+extras = sb3,render
+deps = build>=1.2,<2
+change_dir = {env_tmp_dir}
+set_env =
+    SDL_VIDEODRIVER = dummy
+    SDL_AUDIODRIVER = dummy
+    OMP_NUM_THREADS = 1
+    MKL_NUM_THREADS = 1
+    NPC_GYM_TRAINING_STEPS = 16
+    NPC_GYM_EVALUATION_EPISODES = 2
+    NPC_GYM_MAX_EPISODE_STEPS = 40
+commands =
+    python -c "import sys; from pathlib import Path; import npc_gym; assert Path(npc_gym.__file__).resolve().is_relative_to(Path(sys.prefix))"
+    python {tox_root}/examples/taxi.py
+    python {tox_root}/examples/merchant.py
+    python -c "import os, runpy, tempfile; from pathlib import Path; temporary = tempfile.TemporaryDirectory(); os.chdir(temporary.name); [runpy.run_path('{tox_root}/examples/' + name + '.py', run_name='__main__') for name in ('gardener', 'pacman')]; os.environ['NPC_GYM_ALGORITHM'] = 'ppo'; [runpy.run_path('{tox_root}/examples/' + name + '.py', run_name='__main__') for name in ('gardener', 'pacman')]; os.chdir(Path(temporary.name).parent); temporary.cleanup()"
+    python {tox_root}/examples/custom_environment.py
+    python -m build --outdir {envtmpdir}/dist {tox_root}
+    python {tox_root}/tests/package_smoke.py {envtmpdir}/dist --images
+
+[testenv:learning]
+description = opt-in full learning validation; pass full --output NEW_DIRECTORY explicitly
+extras = sb3
+change_dir = {env_tmp_dir}
+commands = python {tox_root}/experiments/validate_learning.py {posargs}
+
+[testenv:learning-smoke]
+description = exercise CPU-pinned validation with tiny budgets outside the checkout
+platform = linux
+extras = sb3
+change_dir = {env_tmp_dir}
+commands =
+    python -c "import sys; from pathlib import Path; import npc_gym; assert Path(npc_gym.__file__).resolve().is_relative_to(Path(sys.prefix))"
+    python -c "import subprocess, sys, tempfile; from pathlib import Path; temporary = tempfile.TemporaryDirectory(); subprocess.run([sys.executable, '{tox_root}/experiments/validate_learning.py', 'smoke', '--output', str(Path(temporary.name) / 'results'), '--jobs', '1'], check=True); temporary.cleanup()"
+
+[testenv:experiments]
+description = execute tiny training, checkpoint, and evaluation flows
+extras = test,render,sb3,asp,plots
+set_env = CUDA_VISIBLE_DEVICES=
+commands =
+    python -m experiments.generate_paper_tables --help
+    python -m experiments.results --help
+    python -m pytest -q tests/experiments
+
+[testenv:plots]
+description = check public plotting, the plotting CLI and learning-curve aggregation
+extras = plots,test
+commands =
+    python experiments/plot_learning_curves.py --help
+    python -m pytest -q tests/evaluation/test_plot_learning_curves.py tests/evaluation/test_plotting.py
+
+[testenv:docs]
+description = check portable links and build the documentation with warnings as errors
+extras = docs,test
+commands =
+    python -m pytest -q tests/docs
+    python -m sphinx -W --keep-going -b html docs {envtmpdir}/html
+
+[testenv:package]
+description = build and inspect distributions, then smoke-test the installed wheel
+extras = render
+deps = build>=1.2,<2
+commands =
+    python -m build --outdir {envtmpdir}/dist .
+    python tests/package_smoke.py {envtmpdir}/dist
+"""

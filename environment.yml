@@ -1,0 +1,18 @@
+name: npcgym
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.11,<3.14
+  - pip
+  - pip:
+      # Keep Mypy's Python 3.11 target compatible with NumPy's installed stubs.
+      # Keep in step with shell.nix and the Tox typing environment.
+      - numpy>=2,<2.3
+      # sb3 also supplies Torch for the opt-in CPU-pinned learning validation gate.
+      # Pacman images uses the render/sb3/ltlf extras below.
+      # LTLf compilation also needs the MONA executable on PATH (see README).
+      # DQN OFTEN uses the declared asp and sb3 extras together.
+      # ASP policy fixing is optional for library users; included for development.
+      # Includes Storm Taxi timing; smoke-tested by the experiments gate.
+      # The experiments gate also covers smallClassic bolts and CPU dispatch.
+      - -e .[asp,dev,ltlf,optuna,plots,render,sb3,test]

@@ -1,0 +1,128 @@
+{
+  "artifacts": {
+    "evaluations": "evaluations",
+    "learning_curve": "learning_curve.csv",
+    "model": {
+      "path": "model.zip",
+      "sha256": "5b49c8ec1b220de3c9acb68d06a277e4ea10041067ec52729c0dc2db359a32bd"
+    }
+  },
+  "completed_at": "2026-10-07T20:31:12.518944+00:00",
+  "configuration": {
+    "algorithm": {
+      "constructor_kwargs": {
+        "batch_size": 32,
+        "buffer_size": 1000000,
+        "device": "cpu",
+        "exploration_final_eps": 0.05,
+        "exploration_fraction": 0.1,
+        "exploration_initial_eps": 1.0,
+        "gamma": 0.99,
+        "gradient_steps": 1,
+        "learning_rate": 0.0001,
+        "learning_starts": 100,
+        "max_grad_norm": 10.0,
+        "n_steps": 1,
+        "optimize_memory_usage": false,
+        "policy_kwargs": null,
+        "replay_buffer_class": null,
+        "replay_buffer_kwargs": null,
+        "stats_window_size": 100,
+        "target_update_interval": 10000,
+        "tau": 1.0,
+        "tensorboard_log": null,
+        "train_freq": 4,
+        "verbose": 0
+      },
+      "execution_path": "sb3",
+      "id": "sb3/dqn-gardener-default-bolts-v0",
+      "implementation": "stable_baselines3.DQN",
+      "optional_extra": "sb3",
+      "policy": "MlpPolicy"
+    },
+    "environment": {
+      "constructor_kwargs": {
+        "frog_freeze": 5,
+        "grass_respawn": 50,
+        "puddle_respawn": 20,
+        "score_limit": 300,
+        "size": 15
+      },
+      "family": "gardener",
+      "id": "gardener/size-15-v0",
+      "render_kwargs": {}
+    },
+    "experiment_id": "gardener-dqn-bolts-collection-rescue-1m-v0",
+    "run": {
+      "deterministic_evaluation": true,
+      "evaluation_seed_offset": 10000,
+      "final_evaluation_episodes": 1000,
+      "intermediate_evaluation_episodes": 100,
+      "intermediate_evaluation_frequency": 50000,
+      "learning_kwargs": {},
+      "max_episode_steps": 1000,
+      "task_return_units": "unscaled task reward",
+      "training_reward_transform": "task reward - illegal-action penalty - configured norm punishments",
+      "training_steps": 1000000
+    },
+    "scenario": {
+      "id": "gardener/collection-rescue-v0",
+      "monitor_ids": [
+        "gardener/collect-one-v0",
+        "gardener/rescue-v2",
+        "gardener/permission-aware-v0",
+        "gardener/drain-v0"
+      ]
+    },
+    "schema_version": 1,
+    "technique": {
+      "id": "technique/restraining-bolts-v0"
+    },
+    "wrappers": [
+      {
+        "id": "gardener/state-features-frogs-v0",
+        "kind": "observation"
+      },
+      {
+        "id": "gardener/illegal-to-stay-v0",
+        "kind": "action"
+      },
+      {
+        "id": "gardener/collection-rescue-bolts-v0",
+        "kind": "reward"
+      }
+    ]
+  },
+  "experiment_id": "gardener-dqn-bolts-collection-rescue-1m-v0",
+  "failure": null,
+  "provenance": {
+    "device": "cpu",
+    "git": {
+      "available": true,
+      "dirty": false,
+      "revision": null
+    },
+    "packages": {
+      "gymnasium": "1.3.0",
+      "npc-gym": "0.1.0",
+      "numpy": "2.2.6",
+      "stable-baselines3": "2.9.0",
+      "torch": "2.14.1"
+    },
+    "python": "3.13.15"
+  },
+  "schema_version": 1,
+  "seed": 3,
+  "seeds": {
+    "final_evaluation": 10004,
+    "intermediate_evaluation": 10003,
+    "training": 3
+  },
+  "started_at": "2026-10-07T20:19:49.290558+00:00",
+  "status": "complete",
+  "timesteps": {
+    "actual": 1000000,
+    "requested": 1000000
+  },
+  "training_seconds": 456.38057396499426
+}
